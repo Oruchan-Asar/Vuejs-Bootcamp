@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Instance</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app" style="text-align: center">
+      <h1>{{ title }}</h1>
+      <p>{{ content }}</p>
+      <a :href="url" target="_blank" rel="noopener noreferrer"
+        >Go to source codes</a
+      >
+      <br />
+      <br />
+      <button @click="changeTitle('clicked to the button')">
+        Change title
+      </button>
+      <div
+        id="box"
+        @mousemove="updateCoords"
+        @click="changeTitle('clicked inside the box')"
+      ></div>
+      <span>{{ coords.x}}, {{ coords.y }}</span>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
