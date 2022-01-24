@@ -20,12 +20,34 @@
           <div class="col-4 card offset-4 p-2">
             <h3 class="text-center">{{ counter }}</h3>
             <div class="d-flex justify-content-center align-items-center">
-              <button @click="incCounter" class="btn btn-sm btn-primary me-2">
+              <button @click="counter++" class="btn btn-sm btn-primary me-2">
                 +
               </button>
-              <button @click="decCounter" class="btn btn-sm btn-danger">
+              <button @click="counter--" class="btn btn-sm btn-danger">
                 -
               </button>
+            </div>
+            <div
+              class="alert alert-warning m-3 d-flex justify-content-center text-uppercase"
+            >
+              {{ setCondition }}
+            </div>
+          </div>
+
+          <div class="col-4 card offset-4 p-2 mt-3">
+            <h3 class="text-center">{{ counter2 }}</h3>
+            <div class="d-flex justify-content-center align-items-center">
+              <button @click="counter2++" class="btn btn-sm btn-primary me-2">
+                +
+              </button>
+              <button @click="counter2--" class="btn btn-sm btn-danger">
+                -
+              </button>
+            </div>
+            <div
+              class="alert alert-warning m-3 d-flex justify-content-center text-uppercase"
+            >
+              {{ setCondition2 }}
             </div>
           </div>
         </div>
